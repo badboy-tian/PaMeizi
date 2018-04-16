@@ -16,6 +16,7 @@ import com.i7play.supertian.base.BaseActivity
 import com.i7play.supertian.ext.toast
 import com.maning.library.zxing.utils.ZXingUtils
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.share_layout.view.*
 
 class MainActivity : BaseActivity() {
     val titles = arrayListOf("性感", "日本", "台湾", "清纯", "自拍", "日更")
@@ -101,8 +102,6 @@ class MainActivity : BaseActivity() {
             fragments.add(HomeFragment.newInstance(ItemType.LISHI))
             fragments.add(HomeFragment.newInstance(ItemType.WANGYOU))
             fragments.add(HomeFragment.newInstance(ItemType.KEHUAN))
-            fragments.add(HomeFragment.newInstance(ItemType.NVSHENG))
-            fragments.add(RankFragment())
         }
 
 

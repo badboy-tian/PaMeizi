@@ -20,4 +20,11 @@ class HomeFragment : BaseLazyFragment() {
     override fun initView() {
     }
 
+    companion object {
+        fun newInstance(xuanhuan: ItemType): HomeFragment{
+            val homeFragment = HomeFragment()
+
+            return homeFragment
+        }
+    }
 }
