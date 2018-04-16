@@ -1,4 +1,4 @@
-package com.i7play.pameizi
+package com.i7play.pameizi.activity
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -9,9 +9,12 @@ import android.support.v4.app.FragmentStatePagerAdapter
 import android.support.v4.view.MenuItemCompat
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AlertDialog
+import android.support.v7.widget.SearchView
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.SearchView
+import com.i7play.pameizi.HomeFragment
+import com.i7play.pameizi.ItemType
+import com.i7play.pameizi.R
 import com.i7play.supertian.base.BaseActivity
 import com.i7play.supertian.ext.toast
 import com.maning.library.zxing.utils.ZXingUtils
@@ -44,7 +47,7 @@ class MainActivity : BaseActivity() {
         val menuItem = menu.findItem(R.id.action_search)
         val searchView = MenuItemCompat.getActionView(menuItem) as SearchView
         searchView.isSubmitButtonEnabled = true
-        searchView.queryHint = "输入书名/作者"
+        searchView.queryHint = "输入关键字"
         //searchView.setIconifiedByDefault(true)
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(p0: String?): Boolean {
